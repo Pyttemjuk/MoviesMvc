@@ -54,6 +54,7 @@ body {
 
 main {
     padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 2.5rem;
 }
 
@@ -97,8 +98,9 @@ form label {
 .btn {
     border: none;
     padding: 8px 16px;
+    min-width: 10rem;
 }
 
-.btn__add {
+.btn__primary {
     background-color: var(--btn-add-color);
 }
