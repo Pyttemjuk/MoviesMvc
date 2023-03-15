@@ -32,9 +32,6 @@ namespace MoviesMvc.Models
                     Description = "A disk containing mysterious information from a CIA agent ends up in the hands of two unscrupulous and daft gym employees who attempt to sell it."
                 },
             };
-        
-        
-
 
         public void AddMovie(CreateVM model)
         {
@@ -68,7 +65,7 @@ namespace MoviesMvc.Models
 
         public DetailsVM GetMovieById(int id)
         {
-            return movieList.SingleOrDefault(o => o.Id  == id);
+            return movieList.Single(o => o.Id  == id);
         }
 
         public EditVM GetMovieToEditById(int id)
@@ -82,7 +79,7 @@ namespace MoviesMvc.Models
                     MovieCategory = o.MovieCategory,
                     Description = o.Description
                 })
-                .SingleOrDefault(o => o.Id == id);
+                .Single(o => o.Id == id);
         }
     }
 }

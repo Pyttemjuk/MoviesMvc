@@ -64,8 +64,8 @@ namespace MoviesMvc.Controllers
             movieToEdit.Title = model.Title;
             movieToEdit.ReleaseDate = model.ReleaseDate;
             movieToEdit.Description = model.Description;
-            movieToEdit.MovieCategory = movieToEdit.MovieCategory;
-            movieToEdit.Description = movieToEdit.Description;
+            movieToEdit.MovieCategory = model.MovieCategory;
+            movieToEdit.Description = model.Description;
 
             return RedirectToAction(nameof(Index));
         }
