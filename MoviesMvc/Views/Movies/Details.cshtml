@@ -7,3 +7,6 @@
 <h2>@Model.Title (@Model.ReleaseDate.Year)</h2>
 <p>@Model.MovieCategory</p>
 <p>@Model.Description</p>
+<a asp-controller="Movies" asp-action="Details">
+    <input type="button" value="Edit" class="btn btn__primary" />
+</a>
