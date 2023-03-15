@@ -4,9 +4,9 @@
     ViewBag.Title = "Engberg Movie Library - Movie Details";
 }
 
-<h2>@Model.Title (@Model.ReleaseDate.Year)</h2>
-<p>@Model.MovieCategory</p>
-<p>@Model.Description</p>
+<h2 class="h2__title">@Model.Title (@Model.ReleaseDate.Year)</h2>
+<p class="p__category">@Model.MovieCategory</p>
+<p class="p__description">@Model.Description</p>
 <a asp-controller="Movies" asp-action="Edit" asp-route-id="@Model.Id">
     <input type="button" value="Edit" class="btn btn__primary" />
 </a>

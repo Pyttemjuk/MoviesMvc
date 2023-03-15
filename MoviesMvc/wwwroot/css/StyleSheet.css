@@ -76,6 +76,14 @@ nav {
     background-color: var(--nav-color);
 }
 
+nav, .p__description {
+    margin-bottom: 1rem;
+}
+
+.input__title, .date-picker__releasedate, .select__category, .textarea__description, .p__category {
+    margin-bottom: 0.75rem;
+}
+
 a {
     margin-right: 1rem;
     text-decoration: none;
@@ -85,10 +93,6 @@ a {
 form label {
     display: block;
     font-size: 1.25rem;
-}
-
-.input__title, .date-picker__releasedate, .select__category, .textarea__description {
-    margin-bottom: 0.75rem;
 }
 
 .textarea__description {
@@ -103,4 +107,12 @@ form label {
 
 .btn__primary {
     background-color: var(--btn-add-color);
+}
+
+.p__category {
+    font-size: 1.2rem;
+}
+
+.p__description {
+    max-width: 600px;
 }
