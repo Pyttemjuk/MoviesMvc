@@ -7,17 +7,21 @@
 <h2>Add movie to bookshelf</h2>
 <form asp-controller="Movies" asp-action="Create">
     <label asp-for="Title"></label>
-    <input asp-for="Title"/>
+    <input asp-for="Title" class="input__title"/>
     <span asp-validation-for="Title"></span>
     <label asp-for="ReleaseDate"></label>
-    <input asp-for="ReleaseDate" type="date" value="2023-01-01"/>
+    <input asp-for="ReleaseDate" type="date" value="2023-01-01" class="date-picker__releasedate"/>
     <label asp-for="MovieCategory"></label>
     <select 
         asp-items="@(Html.GetEnumSelectList<MoviesMvc.Models.MovieCategoriesEnum>())"
-        asp-for="MovieCategory">
+        asp-for="MovieCategory"
+        class="select__category">
     </select>
     <label asp-for="Description"></label>
-    <textarea asp-for="Description" rows="5" cols="40" style="resize:none;"></textarea>
+    <textarea 
+        asp-for="Description" 
+        rows="5" cols="40" 
+        class="textarea__description" ></textarea>
     <br />
     <input type="submit" value="Add Movie" class="btn"/>
 </form>

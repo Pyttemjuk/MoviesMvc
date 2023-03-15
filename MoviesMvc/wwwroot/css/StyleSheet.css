@@ -42,16 +42,33 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-header {
-    margin: 1rem;
+.container {
+    position: relative;
+    min-height: 100vh;
 }
 
+
 main {
-    margin: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2.5rem;
 }
 
 footer {
-    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+
+h1 {
+    padding: 1rem;
+}
+
+nav {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #C6ECF4;
 }
 
 a {
@@ -60,7 +77,20 @@ a {
     color: black;
 }
 
-input.btn {
+form label {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.input__title, .date-picker__releasedate, .select__category, .textarea__description {
+    margin-bottom: 0.75rem;
+}
+
+.textarea__description {
+    resize: none;
+}
+
+.btn {
     border: none;
     padding: 8px 16px;
 }
