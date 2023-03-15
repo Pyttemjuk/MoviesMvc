@@ -38,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 * {
     --nav-color: #C6ECF4;
+    --btn-add-color: #A6E468;
 }
 
 body {
@@ -96,4 +97,8 @@ form label {
 .btn {
     border: none;
     padding: 8px 16px;
+}
+
+.btn__add {
+    background-color: var(--btn-add-color);
 }
