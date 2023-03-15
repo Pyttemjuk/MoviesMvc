@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 using MoviesMvc.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<DataService>();
+builder.Services.AddScoped<DataService>();
+
+var connstring = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationContext>(o => o.UseSqlServer(connstring));
 
 var app = builder.Build();
 

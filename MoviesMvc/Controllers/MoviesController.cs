@@ -60,12 +60,7 @@ namespace MoviesMvc.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            DetailsVM movieToEdit = dataService.GetMovieById(model.Id);
-            movieToEdit.Title = model.Title;
-            movieToEdit.ReleaseDate = model.ReleaseDate;
-            movieToEdit.Description = model.Description;
-            movieToEdit.MovieCategory = model.MovieCategory;
-            movieToEdit.Description = model.Description;
+            dataService.UpdateMovie(model);
 
             return RedirectToAction(nameof(Index));
         }
