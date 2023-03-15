@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">*@
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1>Engberg Movie Library</h1>
+        <nav>
+            <a asp-controller="Movies" asp-action="Index">Home</a>
+            <a asp-controller="Movies" asp-action="Create">Add Movie</a>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        &copy; Emilia Engberg, 2023
+    </footer>
+    @RenderSection("endOfBody", false)
+</body>
+</html>

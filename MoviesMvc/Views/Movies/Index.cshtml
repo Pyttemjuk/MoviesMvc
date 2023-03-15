@@ -1,0 +1,15 @@
+﻿@model IndexVM[]
+
+@{
+    ViewBag.Title = "Engberg Movie Library";
+}
+
+<h2>Movie Bookshelf</h2>
+<ul>
+@{
+    foreach (var item in Model)
+    {
+            <li><a asp-controller="Movies" asp-action="Details" asp-route-id=@item.Id>@item.Title</a></li>
+    }
+}
+</ul>

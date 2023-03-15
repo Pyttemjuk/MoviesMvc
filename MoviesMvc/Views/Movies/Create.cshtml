@@ -1,0 +1,30 @@
+﻿@model CreateVM
+
+@{
+    ViewBag.Title = "Engberg Movie Library - Add new movie";
+}
+
+<h2>Add movie to bookshelf</h2>
+<form asp-controller="Movies" asp-action="Create">
+    <label asp-for="Title"></label>
+    <input asp-for="Title"/>
+    <span asp-validation-for="Title"></span>
+    <label asp-for="ReleaseDate"></label>
+    <input asp-for="ReleaseDate" type="date" value="2023-01-01"/>
+    <label asp-for="MovieCategory"></label>
+    <select 
+        asp-items="@(Html.GetEnumSelectList<MoviesMvc.Models.MovieCategoriesEnum>())"
+        asp-for="MovieCategory">
+    </select>
+    <label asp-for="Description"></label>
+    <textarea asp-for="Description" rows="5" cols="40" style="resize:none;"></textarea>
+    <br />
+    <input type="submit" value="Add Movie" class="btn"/>
+</form>
+
+@section endOfBody
+{
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+}
