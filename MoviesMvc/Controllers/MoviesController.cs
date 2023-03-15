@@ -46,5 +46,28 @@ namespace MoviesMvc.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet("/Edit/{id}")]
+        public IActionResult Edit(int id)
+        {
+            EditVM model = dataService.GetMovieToEditById(id);
+            return View(model);
+        }
+
+        [HttpPost("/Edit/{id}")]
+        public IActionResult Edit(EditVM model)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            DetailsVM movieToEdit = dataService.GetMovieById(model.Id);
+            movieToEdit.Title = model.Title;
+            movieToEdit.ReleaseDate = model.ReleaseDate;
+            movieToEdit.Description = model.Description;
+            movieToEdit.MovieCategory = movieToEdit.MovieCategory;
+            movieToEdit.Description = movieToEdit.Description;
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

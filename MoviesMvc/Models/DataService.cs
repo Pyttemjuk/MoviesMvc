@@ -70,5 +70,19 @@ namespace MoviesMvc.Models
         {
             return movieList.SingleOrDefault(o => o.Id  == id);
         }
+
+        public EditVM GetMovieToEditById(int id)
+        {
+            return movieList
+                .Select(o => new EditVM()
+                {
+                    Id = o.Id,
+                    Title = o.Title,
+                    ReleaseDate = o.ReleaseDate,
+                    MovieCategory = o.MovieCategory,
+                    Description = o.Description
+                })
+                .SingleOrDefault(o => o.Id == id);
+        }
     }
 }
