@@ -36,6 +36,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* My styles */
 
+* {
+    --nav-color: #C6ECF4;
+}
 
 body {
     font-size: 1.5em;
@@ -68,7 +71,7 @@ h1 {
 nav {
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: #C6ECF4;
+    background-color: var(--nav-color);
 }
 
 a {
