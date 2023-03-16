@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace MoviesMvc.Models
 {
@@ -9,5 +10,14 @@ namespace MoviesMvc.Models
         }
 
         public DbSet<Movie> Movies { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Movie>()
+                .Property(o => o.ReleaseDate)
+                .HasColumnType(SqlDbType.Date.ToString());
+        }
     }
 }
